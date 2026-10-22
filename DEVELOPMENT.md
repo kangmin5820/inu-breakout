@@ -80,7 +80,7 @@ https://docs.google.com/spreadsheets/d/1XqujCdJc4HUxqVVU18Bao7yQEXWBIvXB_npbwr1P
 - 원본 공용 시트 변경 없음
 - 실제 휴대폰 접속 및 좌우 스와이프 패들 조작: 사용자 본인 기기에서 정상 확인 (2026-10-22). 스피커 음량 청취는 별도 확인 필요
 - 로컬 실행 주소: http://localhost:3200/
-- GitHub 저장소(비공개): https://github.com/kangmin5820/inu-breakout
+- GitHub 저장소(공개): https://github.com/kangmin5820/inu-breakout
 - Vercel 게임 주소: https://inu-breakout-chi.vercel.app/
 
 ## 8. GitHub 업로드 및 Vercel 배포
@@ -103,3 +103,7 @@ https://docs.google.com/spreadsheets/d/1XqujCdJc4HUxqVVU18Bao7yQEXWBIvXB_npbwr1P
 - 배포된 API에서 임시 성공 기록을 Google Sheets에 저장하고 TOP 3 재조회 확인
 - DEPLOYTEST 접두어의 임시 기록을 확인 후 삭제
 - 사용자가 배포 주소에 실제 휴대폰으로 접속하여 좌우 스와이프 패들 조작이 정상임을 확인함 (2026-10-22). 스피커 음량 청취는 별도 확인 필요
+
+## 10. 교수님 제출용 공개 설정
+
+사용자 요청에 따라 GitHub 저장소를 Public으로 전환하고, 기록용 Google Sheets를 링크가 있는 모든 사용자에게 뷰어 권한으로 공유했다 (2026-10-22).

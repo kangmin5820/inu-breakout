@@ -4,7 +4,7 @@
 
 게임 실행: https://inu-breakout-chi.vercel.app/
 
-소스 저장소(비공개): https://github.com/kangmin5820/inu-breakout
+소스 저장소(공개): https://github.com/kangmin5820/inu-breakout
 
 Next.js로 제작한 3 RED BRICK CHALLENGE입니다. 빨간 벽돌 3개를 깨면 성공하고, 성공한 기록만 Google Sheets에 저장합니다.
 
