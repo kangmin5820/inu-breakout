@@ -78,7 +78,7 @@ https://docs.google.com/spreadsheets/d/1XqujCdJc4HUxqVVU18Bao7yQEXWBIvXB_npbwr1P
 - 서버 API에서 서명 세션 생성, Google Sheets 기록 저장 및 TOP 3 재조회 통과
 - INUTEST 접두어의 임시 기록을 시트 A2:C2에서 확인한 뒤 삭제 완료
 - 원본 공용 시트 변경 없음
-- 실제 휴대폰 스와이프와 스피커 음량 청취 검증은 사용자 기기에서 추가 확인 필요
+- 실제 휴대폰 접속 및 좌우 스와이프 패들 조작: 사용자 본인 기기에서 정상 확인 (2026-10-22). 스피커 음량 청취는 별도 확인 필요
 - 로컬 실행 주소: http://localhost:3200/
 - GitHub 저장소(비공개): https://github.com/kangmin5820/inu-breakout
 - Vercel 게임 주소: https://inu-breakout-chi.vercel.app/
@@ -102,4 +102,4 @@ https://docs.google.com/spreadsheets/d/1XqujCdJc4HUxqVVU18Bao7yQEXWBIvXB_npbwr1P
 - 보안 게임 세션 생성 및 Secure / HttpOnly 쿠키 확인
 - 배포된 API에서 임시 성공 기록을 Google Sheets에 저장하고 TOP 3 재조회 확인
 - DEPLOYTEST 접두어의 임시 기록을 확인 후 삭제
-- 실제 휴대폰에서의 스와이프 감도와 스피커 음량은 사용자 최종 확인 항목으로 남김
+- 사용자가 배포 주소에 실제 휴대폰으로 접속하여 좌우 스와이프 패들 조작이 정상임을 확인함 (2026-10-22). 스피커 음량 청취는 별도 확인 필요
