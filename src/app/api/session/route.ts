@@ -1,0 +1,3 @@
+import { cookies } from "next/headers";
+import { signSession } from "@/lib/session";
+export async function POST(request: Request) { try { const { name } = await request.json(); if (typeof name !== "string" || !name.trim() || name.trim().length > 20) return Response.json({ error: "이름을 1~20자로 입력해 주세요." }, { status:400 }); const token = signSession(name.trim()); (await cookies()).set("inu_run", token, { httpOnly: true, secure: process.env.NODE_ENV === "production", sameSite: "strict", path: "/", maxAge: 3600 }); return Response.json({ ok: true }); } catch { return Response.json({ error: "게임 세션을 만들지 못했어요. 서버 설정을 확인해 주세요." }, { status: 503 }); } }
