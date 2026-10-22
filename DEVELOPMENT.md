@@ -26,6 +26,8 @@
 - 작성자 학번·이름: 202202056 이강민
 - 공용 시트가 보기 전용이므로 본인 소유 기록 시트를 별도로 만드는 방향 승인
 - 새 복사본 기존 기록 비우기 및 지정 서비스 계정의 복사본 편집 권한 승인
+- 후속 요청: “다음단계 ㄱ”에 따라 별도 GitHub 저장소 업로드와 Vercel 배포 진행
+- Vercel GitHub App에 inu-breakout 저장소 추가 및 새 프로젝트 서버 환경변수 등록 승인
 
 아래는 구현 의도를 기록한 설계 프롬프트이며, 별도의 사용자 발언을 인용한 것이 아니다.
 
@@ -78,4 +80,26 @@ https://docs.google.com/spreadsheets/d/1XqujCdJc4HUxqVVU18Bao7yQEXWBIvXB_npbwr1P
 - 원본 공용 시트 변경 없음
 - 실제 휴대폰 스와이프와 스피커 음량 청취 검증은 사용자 기기에서 추가 확인 필요
 - 로컬 실행 주소: http://localhost:3200/
-- 외부 배포와 GitHub 업로드는 이 새 과제에서 아직 진행하지 않음
+- GitHub 저장소(비공개): https://github.com/kangmin5820/inu-breakout
+- Vercel 게임 주소: https://inu-breakout-chi.vercel.app/
+
+## 8. GitHub 업로드 및 Vercel 배포
+
+기존 포스트잇 과제와 구분되는 `kangmin5820/inu-breakout` 저장소를 생성했다. 소스와 제공 자산, 검사 코드, 개발 문서를 업로드하고 `.env.local`, 비밀키, 빌드 결과 및 node_modules를 제외했다.
+
+기존 Vercel GitHub App의 선택 저장소 목록에 inu-breakout만 추가했다. Vercel `inu-breakout` 프로젝트는 Next.js / Root Directory `./` / main 브랜치를 사용한다. 승인받은 아래 환경변수를 Production의 민감정보로 등록했다.
+
+- GOOGLE_SHEET_ID
+- GOOGLE_SHEET_TAB
+- GOOGLE_CLIENT_EMAIL
+- GOOGLE_PRIVATE_KEY
+- GAME_SESSION_SECRET
+
+## 9. 배포 환경 검증
+
+- 게임 페이지 제목 INU 벽돌깨기 확인
+- Mascot.jpg 및 Hyper_Speed_Run.mp3의 정상 응답 확인
+- 보안 게임 세션 생성 및 Secure / HttpOnly 쿠키 확인
+- 배포된 API에서 임시 성공 기록을 Google Sheets에 저장하고 TOP 3 재조회 확인
+- DEPLOYTEST 접두어의 임시 기록을 확인 후 삭제
+- 실제 휴대폰에서의 스와이프 감도와 스피커 음량은 사용자 최종 확인 항목으로 남김

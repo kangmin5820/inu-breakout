@@ -2,6 +2,10 @@
 
 운동건강학부 · 202202056 · 이강민
 
+게임 실행: https://inu-breakout-chi.vercel.app/
+
+소스 저장소(비공개): https://github.com/kangmin5820/inu-breakout
+
 Next.js로 제작한 3 RED BRICK CHALLENGE입니다. 빨간 벽돌 3개를 깨면 성공하고, 성공한 기록만 Google Sheets에 저장합니다.
 
 ## 실행
@@ -57,3 +61,9 @@ npm run start -- --port 3200
 공용 예시 시트는 읽기 전용 참고 자료로 유지했습니다. 본인 소유 복사본의 `시트1` A:C를 기록 저장소로 사용합니다. 헤더는 `timestamp`, `name`, `finishtime`입니다. 기존 공용 기록을 복사본에서 비우는 작업과 게임 서버 계정에 복사본 편집 권한을 주는 작업은 사용자의 명시적 승인을 받았습니다.
 
 `.env.local`, 비밀키, `node_modules`, `.next`는 소스 ZIP 및 Git에 포함하지 않습니다. 배포 시 같은 환경변수를 별도로 서버에 설정해야 합니다. 서명 세션과 경과시간 검증은 기본 입력 검증이며 완전한 부정행위 방지 시스템은 아닙니다.
+
+## 배포
+
+Vercel의 `inu-breakout` 프로젝트를 `main` 브랜치에 연결했습니다. Root Directory는 `./`, 프레임워크는 Next.js입니다. 승인받은 Google 환경변수 네 개와 `GAME_SESSION_SECRET`는 Production 환경의 민감정보로 등록했습니다. 소스에는 실제 비밀값이 없습니다.
+
+배포된 앱에서 페이지·이미지·음악 응답과 서버 세션 생성, Sheets 기록 저장 및 랭킹 재조회를 확인했습니다. 임시 검증 기록은 정리했습니다. 실제 휴대폰 터치 조작은 사용자 기기에서 최종 확인이 필요합니다.
